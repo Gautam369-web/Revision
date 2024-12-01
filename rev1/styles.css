@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 90vh;  */
+    padding: 10%;
+
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input.valid {
+    border-color: green;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+.message {
+    color: red;
+    font-size: 0.9em;
+}

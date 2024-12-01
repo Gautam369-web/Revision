@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="display"></div>
+
+        <table class="number">
+            <tr>
+                <td><button class="btn" onclick="display('7')">7</button></td>
+                <td><button class="btn" onclick="display('8')">8</button></td>
+                <td><button class="btn" onclick="display('9')">9</button></td>
+                <td><button class="btn" onclick="display('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="display('4')">4</button></td>
+                <td><button class="btn" onclick="display('5')">5</button></td>
+                <td><button class="btn" onclick="display('6')">6</button></td>
+                <td><button class="btn" onclick="display('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="display('1')">1</button></td>
+                <td><button class="btn" onclick="display('2')">2</button></td>
+                <td><button class="btn" onclick="display('3')">3</button></td>
+                <td><button class="btn" onclick="display('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="display('0')">0</button></td>
+                <td><button class="btn" onclick="display('.')">.</button></td>
+                <td><button class="btn" onclick="display('=')">=</button></td>
+                <td><button class="btn" onclick="display('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" onclick="display('C')">C</button></td>
+                <td><button class="btn" onclick="display('(')">(</button></td>
+                <td><button class="btn" onclick="display(')')">)</button></td>
+                <td><button class="btn" onclick="display('^')">^</button></td>
+            </tr>
+        </table>
+    </div>
+<script>
+    function display(value) {
+        document.querySelector('.display').innerHTML += value;
+    }
+    function calculate() {
+        let result = document.querySelector('.display').innerHTML;
+        document.querySelector('.display').innerHTML = eval(result);
+    }
+    function clearDisplay() {
+        document.querySelector('.display').innerHTML = '';
+    }
+
+    document.querySelector('.btn').addEventListener('click', function() {
+        calculate();
+    });
+</script>
+
+</body>
+</html>
